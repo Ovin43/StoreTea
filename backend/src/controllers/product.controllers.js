@@ -1,4 +1,5 @@
 import Product from "../model/product.model.js";
+import EXP from "../model/exp.model.js";
 
 export const prodload = async(req,res)=>{
     const{prodName,quantity,cost}= req.body;
