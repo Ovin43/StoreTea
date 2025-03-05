@@ -58,5 +58,5 @@ export const productDtails= async(req,res)=>{
 };
 
 export const costDetails =async(req,res)=>{
-    
+    const {prodName}= req.body;
 };
