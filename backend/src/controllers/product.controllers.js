@@ -58,5 +58,17 @@ export const productDtails= async(req,res)=>{
 };
 
 export const costDetails =async(req,res)=>{
-    const {prodName}= req.body;
+    const {prodCount}=req.body;
+    const usId = req.user._id;
+    const prodId = req.prod._id;
+    try{
+        const prods= await Product.findById({prodId}); 
+        if(prodCount){
+            
+            let total= prodCount*prodcost;
+        }
+    }catch(error){
+        console.error("Error in costDetails: ",error.message);
+        res.status(500).json({message:"internal server error"})
+    }
 };
