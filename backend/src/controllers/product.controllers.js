@@ -65,9 +65,20 @@ export const costDetails =async(req,res)=>{
         const prods= await Product.findById({prodId}); 
         if(prodCount){
             const prodcost=prods.cost;
+            const prodquat=prods.quantity;
             let total = prodCount*prodcost;
+            let upquant= prodquat-prodCount;
+            const totals= new EXP({
+                buyerId:usId,
+                productId:prodId,
+                prodCount,
+                totalCost:total,
+            });
+        
+            prods.quantity=upquant;
             
-
+            await prods.save();
+            await totals.save();
         }
     }catch(error){
         console.error("Error in costDetails: ",error.message);
