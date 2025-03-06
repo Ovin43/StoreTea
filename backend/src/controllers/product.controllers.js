@@ -64,8 +64,10 @@ export const costDetails =async(req,res)=>{
     try{
         const prods= await Product.findById({prodId}); 
         if(prodCount){
+            const prodcost=prods.cost;
+            let total = prodCount*prodcost;
             
-            let total= prodCount*prodcost;
+
         }
     }catch(error){
         console.error("Error in costDetails: ",error.message);
