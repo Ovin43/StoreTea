@@ -187,6 +187,8 @@
     aspect-ratio: 20/9;
     justify-content: center;
     align-items: center;
+    border-radius: 6px;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
 }
 .cards{
     position:relative;
@@ -196,47 +198,72 @@
     max-width :100%;
     gap: 20px;
     width: calc(100% - 20px);
+    background-color: #fff;
 }
 .card{
     display: flex;
     justify-content: center;
     align-items: center;
-    width:500px;
-    height: 300px;
+    width: 100%;
+    aspect-ratio: 18/7;
     border-radius: 6px;
     cursor: pointer;
     padding:1rem;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
+    gap:12px;
 }
+/*
 .card:hover{
     transform: translate(0,10%);
 }
 .card h1:hover{
     color: #fff;
 }
+
 .card:nth-child(1){
-    background-image: url(img/blacktea.jpg);
+    background-image: url(img/bla.jpg);
     background-size:cover;
 }
 .card:nth-child(2){
-    background-image: url(img/greente.jpg);
+    background-image: url(img/gre.jpg);
     background-size:cover;
 }
 .card:nth-child(3){
-    background-image: url(img/whitetea.jpg);
+    background-image: url(img/whi.jpg);
     background-size:cover;
 }
 .card:nth-child(4){
-    background-image: url(img/yellowtea.jpg);
+    background-image: url(img/olv.jpg);
     background-size:cover;
+} */
+
+.onse{
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: black;
+}
+
+.onsa{
+    border-top-left-radius:20px;
+    border-top-right-radius:200px;
+    border-bottom-left-radius:200px ;
+    border-bottom-right-radius:20px ;
+    height:100%;
+    width:50%;
+}
+.bli{
+    width:50%;
+    height:100%;
+    border-radius:20px;
+    background-color: rgba(0, 0, 0, 0.4);
+
 }
 .card a{
     text-decoration: none;
 }
 .card  a h1{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 400%;
-    color: black;  
+    font-size:larger;
+    color: black;   
 }
 .product{
     position: relative;
