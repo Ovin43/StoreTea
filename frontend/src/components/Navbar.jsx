@@ -1,20 +1,34 @@
+import { LogOut, User } from "lucide-react"
+import { Link } from "react-router-dom"
+
+import { useAuthStore } from "../store/useAuthStore"
+
+
 const Navbar= ()=>{
+    const {authUser,logout}=useAuthStore();
     return(
         <>
         <header className="hea">
             <div className="dime">
-                <img className="logo"  src="img/one1.jpg"/>
+                <Link to="/">
+                    <img className="logo"  src="img/one1.jpg"/>
+                </Link>
             </div>
-            <div className="profile">
-                <a href="/login"><img className="proimg" src="img/gojo.jpg"/></a>
+            {authUser && (
+                <>
+                <Link to="/profile">
+                    <User/>
+                </Link>
+                <button onClick={logout}>
+                <LogOut/>
+
+                </button>
+                </>
+            )}
+            <div className="profile"  >
+                <a href="/profile"><img className="proimg" src="img/gojo.jpg"/></a>
             </div>
         </header>
-        <hr />
-        <section className="one">
-             <nav className="list"><a className="h" href="/">Home</a></nav>
-            <nav className="list"><a className="h" href="#products">Products</a></nav>
-            <nav className="list"><a className="h" href="#contact">Contact us</a></nav>
-        </section>
         <hr />
         </>
     )

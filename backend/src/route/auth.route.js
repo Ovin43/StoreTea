@@ -12,6 +12,6 @@ router.post("/login",login);
 
 router.post("/updatePro",updateProfile);
 
-router.post("/checkAuth",checkAuth);
+router.get("/checkAuth",checkAuth);
 
 export default router;

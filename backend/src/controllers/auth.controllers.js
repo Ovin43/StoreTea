@@ -50,11 +50,11 @@ export const login=async(req,res)=>{
     const {email,password}=req.body;
     try{
         const user=await User.findOne({email})
-
         if(!user){
             return res.status(400).json({message:"Invalid credientials"});
         }
-        const isPasswordCorrect=await bycrypt.compare(password, user.password)
+
+        const isPasswordCorrect = await bycrypt.compare(password, user.password)
         if(!isPasswordCorrect){
             return res.status(400).json({message:"Invalid credientials"});
         }
@@ -82,7 +82,7 @@ export const logout= (req,res)=>{
     }
 }
 
-export const updateProfile=async(req,res)=>{
+export const updateProfile=async(req,res)=>{d
     try{
         const {profilPic}=req.body;
         const userId=req.user._id;

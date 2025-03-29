@@ -27,7 +27,12 @@ const ProdSlie=()=>{
                             <div className="card">
                                 <img src={item.img} className="onsa" />
                                 <div className="bli"> 
-                                    <h1>{item.text}</h1>
+                                    <h1 className="bilh1">{item.text}</h1>
+                                    <p className="bilp">text</p>
+                                    <div className="bilbut">
+                                    <button className="bilcart">Add to Cart</button>
+                                    <button className="bilsee">See Product</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

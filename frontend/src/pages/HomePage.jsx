@@ -9,13 +9,19 @@ const HomePage= () =>{
 
     return(
         <>
-        <Slidebar/>
-        <Quote/>
-        <div className="product" id="products">
-            <h1>Products</h1>
-        </div>
-        <ProdSlie/>
-        <Footer/>
+            <section className="one">
+                <nav className="list"><a className="h" href="/">Home</a></nav>
+                <nav className="list"><a className="h" href="#products">Products</a></nav>
+                <nav className="list"><a className="h" href="#contact">Contact us</a></nav>
+            </section>
+            <hr />
+            <Slidebar/>
+            <Quote/>
+                <div className="product" id="products">
+                    <h1>Products</h1>
+                </div>
+            <ProdSlie/>
+            <Footer/>
         </>
     )
 
