@@ -1,4 +1,4 @@
-import {Eye, EyeOff, Loader2, Mail, MessageSquare} from "lucide-react"
+import {Eye, EyeOff, Loader2, Lock, Mail, MessageSquare} from "lucide-react"
 import { useState } from "react"
 import { useAuthStore } from "../store/useAuthStore";
 import {Link} from "react-router-dom";
@@ -32,7 +32,10 @@ const LoginPage = () =>{
                         <input type="email" className="loginUsepass" placeholder="you@example.com"  value={formData.email} onChange={(e)=>setformData({ ...formData,email:e.target.value})} />
                     </div>
                     <div className="logindiv">
-                        <p className="loginPassname">Password</p>
+                        <div className="loginPass">
+                        <Lock/>
+                        <p className="loginPassname">Password</p>         
+                        </div>
                         <div className="loginPass"> 
                             <input type={showPassword? "text":"password"} className="loginPasspass" placeholder="••••••••"   value={formData.password} onChange={(e)=>setformData({  ...formData , password:e.target.value})}/>
                             <button type="button" className="loginEye" onClick={()=>setShowPassword(!showPassword)}>

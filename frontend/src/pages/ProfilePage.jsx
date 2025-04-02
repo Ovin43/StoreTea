@@ -1,7 +1,15 @@
+import { LogOut } from "lucide-react"
+import { useAuthStore } from "../store/useAuthStore"
+
 const ProfilePage= () =>{
+
+    const{logout}=useAuthStore();
     return(
         <>
-        Profile page
+           <button onClick={logout}>
+                <LogOut/>
+           </button>
+            
         </>
     )
 

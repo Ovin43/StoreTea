@@ -1,4 +1,4 @@
-import { LogOut, User } from "lucide-react"
+import { BadgeCheck, LogOut, ShoppingBasket, ShoppingBasketIcon, Sidebar, User } from "lucide-react"
 import { Link } from "react-router-dom"
 
 import { useAuthStore } from "../store/useAuthStore"
@@ -8,28 +8,35 @@ const Navbar= ()=>{
     const {authUser,logout}=useAuthStore();
     return(
         <>
-        <header className="hea">
-            <div className="dime">
-                <Link to="/">
-                    <img className="logo"  src="img/one1.jpg"/>
-                </Link>
-            </div>
-            {authUser && (
-                <>
-                <Link to="/profile">
-                    <User/>
-                </Link>
-                <button onClick={logout}>
-                <LogOut/>
-
-                </button>
-                </>
-            )}
-            <div className="profile"  >
-                <a href="/profile"><img className="proimg" src="img/gojo.jpg"/></a>
-            </div>
+        <header className="navhea">
+            <section className="navsec">
+                <div className="navmainlogo">
+                    <Link to="/">
+                        <img className="logo"  src="img/one1.jpg"/>
+                    </Link>
+                </div>
+                <div className="navothercomp">
+                    {authUser && (
+                        <>
+                            <Link to={"/profile"}>
+                                <div className="navprofile"  >
+                                    <img className="navprofileimg" src="img/gojo.jpg"/>
+                                </div>
+                            </Link>
+                            <button onClick={logout} className="navlogoutbut">
+                                <LogOut className="navlogoutlogo"/>
+                            </button>
+                            <Link to={"/cart"}>
+                                <div className="navshopping"  >
+                                    <ShoppingBasketIcon className="navshoppinglogo"/>   
+                                </div>
+                            </Link>
+                        </>
+                    )}
+                </div>
+            </section>
+            <hr/>
         </header>
-        <hr />
         </>
     )
 }

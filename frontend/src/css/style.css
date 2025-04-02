@@ -1,20 +1,36 @@
-@media screen and(max-width:800px) {
+/* @media screen and(max-width:800px) {
     body {
        width:100%;
     } 
+} */
+
+body{
+    margin: 0%;
 }
 
-.hea{
-    position: relative;
+hr{
+    margin: 0;
+}
+.navhea{
+    position:fixed;
     width:100%;
     height:80px;
+    z-index:2;
+    background-color: #fff;
+    padding: 5px;
+    padding-bottom: 0;
+
 }
-.dime{
-    position: absolute;
-    display: flex;
+.navsec{
+    position: relative;
     width:100%;
     height:100%;
-    justify-content: center;
+}
+.navmainlogo{
+    position: absolute;
+    width:100%;
+    height:100%;
+    left:100px;
 }
 
 .logo{
@@ -22,13 +38,22 @@
     width:100px;
     height:100%;
 }
-.profile{
-    position:absolute;
+
+.navothercomp{
+    position: absolute;
+    display: flex;
+    width:30%;
+    height:100%;
+    right: 10px;
+}
+
+.navprofile{
+    position:relative;
     right:0%;
     width:100px;
     height:100%;
 }
-.proimg{
+.navprofileimg{
     width:100%;
     height:100%;
     border-radius: 50px;
@@ -58,7 +83,7 @@
     text-decoration: none;
 }
 .service{
-    padding-top: 2rem;
+    padding-top: 7rem;
     padding-bottom: 4rem;
 }
 .slider-wrapper{
