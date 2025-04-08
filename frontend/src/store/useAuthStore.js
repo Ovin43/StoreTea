@@ -3,11 +3,12 @@ import { axiosInstance } from "../lib/axios";
 import toast from "react-hot-toast";
 
 
-export const useAuthStore = create((set)=>({
+export const useAuthStore = create((set,get)=>({
     authUser:null,
     isLogginIn:false,
     isSigningUp:false,
     isCheckingAuth:true,
+    lognav:false,
 
 
     checkAuth: async() => {
@@ -22,6 +23,14 @@ export const useAuthStore = create((set)=>({
         }
     },
 
+    lognavcheck: ()=>{
+        set({lognav:true});
+    },
+
+    lognavvheckout: ()=>{
+        set({lognav:false});
+    },
+
     signup: async (data) => {
         set({isSigningUp:true})
         try{
@@ -32,6 +41,7 @@ export const useAuthStore = create((set)=>({
             toast.error(error.respond.data.message);
         }finally{
             set({isSigningUp:false});
+            set({lognav:false});
         }
         
     },
@@ -45,7 +55,8 @@ export const useAuthStore = create((set)=>({
         } catch (error) {
             toast.error(error.respond.data.message);
         }finally{
-            set({isLogginIn:false})
+            set({isLogginIn:false});
+            set({lognav:false});
         }
     },
 

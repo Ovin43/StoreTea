@@ -1,7 +1,7 @@
 import { useRef } from "react"
 import { Swiper,SwiperSlide } from "swiper/react";
 import { Navigation} from "swiper/modules";
-import { dli} from "../data/data";
+import {prodsl} from "../data/data";
 import "swiper/css";
 import "swiper/css/navigation";
 // import "swiper/css/scrollbar";
@@ -21,7 +21,7 @@ const ProdSlie=()=>{
                         // scrollbar={{ draggable: true }}
                         className="rounded-lg overflow-hidden"
                     > 
-                    {dli.map((item,index)=>(
+                    {prodsl.map((item,index)=>(
                         <SwiperSlide key={index} className="flex flex-col items-center">
                         <div className="cards">
                             <div className="card">

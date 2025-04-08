@@ -1,15 +1,34 @@
+import { useEffect, useState } from "react";
+import { quotes } from "../data/data"
+
+
+
 const Quote = () =>{
+    const[count,setcount]=useState(0);
+
+
+    useEffect(()=>{
+        const intervalId= setInterval(()=>{
+                setcount(prev=>(prev+1)%quotes.length);
+        },7000);
+
+        return ()=>clearInterval(intervalId);
+    },[]);
+
     return(
         <>
             <section className="info">
                 <div className="fronimg"><img /></div>
                 <div className="fronbox">
                     <div className="frontext">
-                        <p>
-                            "I am a humble tea merchant, pouring out the elixir of life to the
-                            world."<br />
-                            - Kakuzo Okakura
-                        </p>
+                        <div>
+                        {
+                        <>
+                            <p>{quotes[count].quot}</p>
+                            <p>-{quotes[count].auth}</p>
+                        </>
+                        }   
+                        </div>
                     </div>
                 </div>
             </section>

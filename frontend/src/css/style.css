@@ -11,15 +11,25 @@ body{
 hr{
     margin: 0;
 }
+
+
+/* NAVBAR */
 .navhea{
     position:fixed;
     width:100%;
-    height:80px;
+    height:60px;
     z-index:2;
     background-color: #fff;
     padding: 5px;
     padding-bottom: 0;
 
+}
+
+.navheast{
+    position:relative;
+    width:100%;
+    height:80px;
+    background-color: #fff;
 }
 .navsec{
     position: relative;
@@ -33,10 +43,17 @@ hr{
     left:100px;
 }
 
+.navmainlogost{
+    display: flex;
+    width:100%;
+    height:100%;
+    justify-content: center;
+}
+
 .logo{
     cursor: pointer;
-    width:100px;
-    height:100%;
+    width:80px;
+    height:80%;
 }
 
 .navothercomp{
@@ -44,46 +61,126 @@ hr{
     display: flex;
     width:30%;
     height:100%;
-    right: 10px;
+    justify-content: end;
+    right:100px;
 }
 
 .navprofile{
     position:relative;
     right:0%;
-    width:100px;
+    width:80px;
     height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .navprofileimg{
-    width:100%;
-    height:100%;
+    width:80%;
+    height:80%;
     border-radius: 50px;
 }
 
-.one{
+.navloginbutton{
     display:flex;
-    justify-content: center;
+    width: 100px;
+    justify-items: center;
     align-items: center;
-    width:100%;
-    height: 30px;
-    padding: 0;
-    margin: 0;
-    gap: 140px;
-    
-}
-
-.list{
-    width:auto;
-    
-}
-.h{
-    color: black;
-    font:bold;
-    font-size:100%;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-decoration: none;
 }
+
+.navloginbuttonsec{
+    display:flex;
+    font-size: 19px;
+    color: #000000;
+    justify-items: center;
+    align-items: center;
+}
+
+.navloginbuttonsec:hover{
+    padding:4px;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+}
+
+.navshopping{
+    display: flex;
+    width:60px;
+    color: #000;
+    justify-items: center;
+    align-items: center;
+}
+@keyframes ligh{
+    0%{
+        color: #000;
+    }
+    25%{
+        color: #000;
+    }
+    50%{
+        color: #5e5c5c;
+    }
+    75%{
+        color: #5e5c5c;
+    }
+}
+
+.navshopping:hover{
+    animation: ligh 1s infinite ;
+}
+.navtogglemenu{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    width:60px;
+    color: #000;
+    justify-items: center;
+    align-items: center;
+}
+
+.navtogglemenu:hover{
+    animation: ligh 1s infinite ;
+}
+
+.navtogglemenudiv{
+    position:absolute;
+    top:20px;
+    padding: 4px;
+    width:130px;
+    border-radius:10px;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
+    left: 0; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+    background-color: #fff;
+}
+
+.navclose{
+    position:absolute;
+    margin: 10px;
+    right: 0;
+}
+
+.navtogglemenudivul{
+    margin-top: 40px;
+    padding:10px;
+}
+
+.navtogglemenudivli{
+    list-style:none; 
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.navtogglemenudivlia{
+    color: #000;
+    text-decoration: none; 
+
+}
+
+
+
 .service{
-    padding-top: 7rem;
+    padding-top: 5rem;
     padding-bottom: 4rem;
 }
 .slider-wrapper{
@@ -180,29 +277,31 @@ hr{
 }
 .fronbox{
     position: absolute;
-    border-radius: 6px;
-    transform: translate(50%,50%);
-    width: 50%;
-    height:50%;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-.frontext{
-    position: absolute;
+    height:100%;
     width:100%;
-    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frontext{
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    height:50%;
+    min-width:50%;
+    max-width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-/* .frontext h1{
-    color: white;
-    transform: translate(10%,-100%);
-    font-size: 400%;
-} */
-.frontext p{
-    padding:8px;
+
+.fronbox p{
     color: white;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 8px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .pro{

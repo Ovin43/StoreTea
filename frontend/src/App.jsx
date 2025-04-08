@@ -40,7 +40,7 @@ const App = () => {
       <Navbar/>
 
       <Routes>
-        <Route path="/" element={authUser?<HomePage/>:<Navigate to="/login"/>}/>
+        <Route path="/" element={<HomePage/>}/>
         <Route path="/login" element={!authUser ?<LoginPage/>:<Navigate to="/"/>}/>
         <Route path="/signup" element={!authUser ?<SignUpPage/>:<Navigate to="/"/>}/>
         <Route path="/product" element={<ProductPage/>}/>
