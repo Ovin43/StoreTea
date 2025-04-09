@@ -14,6 +14,7 @@ import CartPage from "./pages/CartPage"
 
 import"./css/style.css"
 import"./css/loginstyle.css"
+import"./css/product.css"
 
 import { useAuthStore } from "./store/useAuthStore"
 

@@ -1,3 +1,4 @@
+
 export const head=[
     {
         img:"../img/one1.jpg"
@@ -12,19 +13,24 @@ export const head=[
 export const prodsl =[
     {
         img:"/img/bla.jpg",
-        text:"Black Tea"
+        name:"Black Tea",
+        text:"A common tea with a strong flavor and dark color. It's made by oxidizing tea leaves, then drying and heat-treating them"
+
     },
     {
         img:"/img/gre.jpg",
-        text:"Green Tea"
-    },
-    {
-        img:"/img/whi.jpg",
-        text:"White Tea"
+        name:"Green Tea",
+        text:"A popular tea that's unoxidized and has a grassy, vegetal flavor. It's made from the Camellia sinensis plant."
     },
     {
         img:"/img/olv.jpg",
-        text:"Olong Tea"
+        name:"Oolong Tea",
+        text:"A tea that's partially oxidized, so it has a flavor that's a cross between black and green tea."
+    },
+    {
+        img:"/img/whi.jpg",
+        name:"White Tea",
+        text:"A tea that's minimally processed, so it's delicate and light. It's made from young tea leaves that are covered in tiny white hairs."
     }
 ]
 

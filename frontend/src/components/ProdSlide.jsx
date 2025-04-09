@@ -2,6 +2,7 @@ import { useRef } from "react"
 import { Swiper,SwiperSlide } from "swiper/react";
 import { Navigation} from "swiper/modules";
 import {prodsl} from "../data/data";
+import { Link } from "react-router-dom"
 import "swiper/css";
 import "swiper/css/navigation";
 // import "swiper/css/scrollbar";
@@ -27,11 +28,11 @@ const ProdSlie=()=>{
                             <div className="card">
                                 <img src={item.img} className="onsa" />
                                 <div className="bli"> 
-                                    <h1 className="bilh1">{item.text}</h1>
-                                    <p className="bilp">text</p>
+                                    <h1 className="bilh1">{item.name}</h1>
+                                    <p className="bilp">{item.text}</p>
                                     <div className="bilbut">
-                                    <button className="bilcart">Add to Cart</button>
-                                    <button className="bilsee">See Product</button>
+                                    <Link to={"/cart"}><button className="bilcart">Add to Cart</button></Link>
+                                    <Link to={"/product"}><button className="bilsee">See Product</button></Link>
                                     </div>
                                 </div>
                             </div>
