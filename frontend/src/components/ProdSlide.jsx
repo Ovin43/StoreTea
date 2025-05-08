@@ -1,14 +1,22 @@
-import { useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Swiper,SwiperSlide } from "swiper/react";
 import { Navigation} from "swiper/modules";
 import {prodsl} from "../data/data";
 import { Link } from "react-router-dom"
 import "swiper/css";
 import "swiper/css/navigation";
+import { useProductStore } from "../store/useProductStore";
 // import "swiper/css/scrollbar";
 
 const ProdSlie=()=>{
+    const[name,setName]=useState("Green Tea");
+
     const slRef = useRef(null);
+    
+    const {productDetails} = useProductStore();
+    useEffect(()=>{
+            productDetails({prodName:name})
+        },[name])
     return(
         <>
             <section className="pro">
@@ -32,7 +40,7 @@ const ProdSlie=()=>{
                                     <p className="bilp">{item.text}</p>
                                     <div className="bilbut">
                                     <Link to={"/cart"}><button className="bilcart">Add to Cart</button></Link>
-                                    <Link to={"/product"}><button className="bilsee">See Product</button></Link>
+                                    <Link to={"/product"}><button className="bilsee" onClick={()=>{setName(item.name)}}>See Product</button></Link>
                                     </div>
                                 </div>
                             </div>

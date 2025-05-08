@@ -17,10 +17,12 @@ import"./css/loginstyle.css"
 import"./css/product.css"
 
 import { useAuthStore } from "./store/useAuthStore"
+import { useProductStore } from "./store/useProductStore"
 
 
 const App = () => {
 
+  const {prodInfo,prodNames} =useProductStore();
   const {authUser,checkAuth,isCheckingAuth} = useAuthStore();
 
   useEffect(()=>{
@@ -28,6 +30,8 @@ const App = () => {
   },[checkAuth])
 
   console.log({authUser});
+  console.log({prodInfo})
+  console.log({prodNames});
 
   if(isCheckingAuth && !authUser)
     return(

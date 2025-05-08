@@ -45,7 +45,8 @@ export const productDtails= async(req,res)=>{
             _id: prod._id,
             prodName: prod.prodName,
             quantity: prod.quantity,
-            cost: prod.cost
+            cost: prod.cost,
+            itemcount:prod.itemcount,
             })
         }else{
             res.status(400).json({message:"Invalid product name"});

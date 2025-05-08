@@ -137,3 +137,137 @@ export const quotes=[
     },
 
 ]
+
+export const slides=[
+    {
+        img:"img/slid1.jpg",
+    },
+    {
+        img:"img/slid2.jpg",
+    },
+    {
+        img:"img/slid3.jpg",
+    },
+    {
+        img:"img/slid4.jpg",
+    }
+
+]
+
+export const prodslides=[
+
+    {
+        img:"img/slid1.jpg",
+    },
+    {
+        img:"img/slid2.jpg",
+    },
+    {
+        img:"img/slid3.jpg",
+    },
+    {
+        img:"img/slid4.jpg",
+    }
+
+]
+
+export const productname=[
+    {
+        name:"Black Tea"
+    },
+    {
+        name:"Green Tea"
+    },
+    {
+        name:"Oolong Tea"
+    },
+    {
+        name:"White Tea"
+    },
+
+]
+
+export const productcontent=[
+    {
+        content:"A common tea with a strong flavor and dark color. It's made by oxidizing tea leaves, then drying and heat-treating them"
+    },
+    {
+        content:"A popular tea that's unoxidized and has a grassy, vegetal flavor. It's made from the Camellia sinensis plant."
+    },
+    {
+        content:"A tea that's partially oxidized, so it has a flavor that's a cross between black and green tea."
+    },
+    {
+        content:"A tea that's minimally processed, so it's delicate and light. It's made from young tea leaves that are covered in tiny white hairs."
+    },
+]
+
+export const productimages=[
+    {
+       
+        images:[
+            {
+                img:"/img/bla.jpg"
+            },
+            {
+                img:"/img/bla.jpg"
+            },
+            {
+                img:"/img/bla.jpg"
+            },
+            {
+                img:"/img/bla.jpg"
+            }
+        ]
+    },
+    {
+        images:[
+            {
+                img:"/img/gre.jpg"
+            },
+            {
+                img:"/img/gre.jpg"
+            },
+            {
+                img:"/img/gre.jpg"
+            },
+            {
+                img:"/img/gre.jpg"
+            }
+        ]
+    },
+    {
+        images:[
+            {
+                img:"/img/olv.jpg"
+            },
+            {
+                img:"/img/olv.jpg"
+            },
+            {
+                img:"/img/olv.jpg"
+            },
+            {
+                img:"/img/olv.jpg"
+            }
+        ]
+    },
+    {
+        images:[
+            {
+                img:"/img/whi.jpg"
+            },
+            {
+                img:"/img/whi.jpg"
+            },
+            {
+                img:"/img/whi.jpg"
+            },
+            {
+                img:"/img/whi.jpg"
+            }
+        ]
+    }
+]
+
+
