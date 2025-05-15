@@ -1,16 +1,17 @@
 import { SwiperSlide , Swiper } from "swiper/react"
-import { prodslides, productcontent, productname} from "../data/data"
+import { prodslides, productcontent, productimages, productname} from "../data/data"
 import "swiper/css"; 
 import "swiper/css/pagination"   
 import { useEffect, useRef, useState } from "react";
 import {Autoplay, Pagination} from "swiper/modules";
 import { useProductStore } from "../store/useProductStore";
-import { Loader } from "lucide-react";
+import { Loader, Scale } from "lucide-react";
 
 
 const ProductPage =()=>{
     let saves =null;
-    const {productDetails,prodInfo} = useProductStore();
+    let numcont=null;
+    const {productstore,prodInfo} = useProductStore();
 
     function stordata(){
         const save=localStorage.getItem('data');
@@ -22,12 +23,35 @@ const ProductPage =()=>{
 
     const[name,setName]=useState(saves.prodName);
 
-    const[cont,setcont]=useState(saves.itemcount);
+    switch(saves.prodName){
+        case "Black Tea" :
+            numcont=0;
+            break;
+        
+        case "Green Tea" :
+            numcont=1;
+            break;
+
+        case "Oolong Tea" :
+            numcont=2;
+            break;
+
+        case "White Tea":
+            numcont=3;
+            break;
+
+        default:
+            console.log("error in switch");
+    }
+
+
 
     const selRef=useRef(null);
 
     useEffect(()=>{
-        productDetails({prodName:name})
+        productstore({prodName:name})
+
+
     },[name])
 
     return (
@@ -54,7 +78,7 @@ const ProductPage =()=>{
                             autoplay={{delay:5000 , disableOnInteraction:false}}
                             loop={true}
                             >
-                            {prodslides.map((item,index)=>(
+                            {productimages[numcont].images.map((item,index)=>(
                                 <>
                                 <SwiperSlide key={index}>
                                         <div className="sliderr">
@@ -69,27 +93,28 @@ const ProductPage =()=>{
                 </div>
                 <div className="product-display-content">
                     <div className="product-display-content-div">
-                        <section className="product-display-content-first-box">
-                            <div className="product-display-content-name">
+                        <div className="product-display-content-name">
                                 {prodInfo.prodName}
-                            </div>
+                         </div>
+                         <hr></hr>
+                        <section className="product-display-content-first-box">
                             <div className="product-display-content-cost">
-                                {prodInfo.cost}
+                                <p>Rs {prodInfo.cost}</p>
+                            </div>
+                            <div className="product-display-content-quantity">
+                                <p>In Stock {prodInfo.quantity}</p>
                             </div>
                         </section>
-                        <div className="product-display-content-quantity">
-                            {prodInfo.quantity}
-                        </div>
                         <div className="product-display-content-content">
-                           {productcontent[0].content}
+                           {productcontent[numcont].content}
                         </div>
                         <section className="product-display-content-buy">
-                            <div className="product-display-content-div-buy">
-                                buy
-                            </div>
-                            <div className="product-display-content-cart">
-                                cart
-                            </div>
+                            <button className="product-display-content-cart">
+                                Cart
+                            </button>
+                            <button className="product-display-content-div-buy">
+                                Buy
+                            </button>
                         </section>
                     </div>
                 </div>

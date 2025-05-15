@@ -9,27 +9,20 @@ export const useProductStore= create((set,get)=>({
 
 
     productstore: (data)=>{
-        if(data==null){
-            const save=localStorage.getItem('data');
-            return save ? JSON.parse(save) : [];
-        }else{
+        if(data!=null){
             localStorage.setItem('data',JSON.stringify(data));
-            const save=localStorage.getItem('data');
-            return save ? JSON.parse(save) : [];
+            get().productDetails(data);
+        }else{
+            toast.error("the data is empty");
         }
     },
     
     productDetails: async(data)=>{
         try{
-            set({prodNames:data});
             const res= await axiosInstance.post("/product/productdetails" ,data);
             set({prodInfo:res.data});
         }catch(error){
             toast.error(error.respond.data.message);
-        }finally{
-            const ras = get().productstore(data);
-            set({prodNames:ras.prodName})
-            console.log(data);
         }
     }
 }))

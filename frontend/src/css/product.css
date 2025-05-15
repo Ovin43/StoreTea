@@ -73,6 +73,7 @@
 }
 
 .product-display-content{
+    position: relative;
     width: 50%;
     height:100%;
     display:flex;
@@ -81,52 +82,82 @@
 }
 
 .product-display-content-div{
-    background-color: antiquewhite;
     width:90%;
     height:75%;
+}
+
+.product-display-content-name{
+    position:relative;
+    height:18%;
+    font-size:200%;
 }
 
 .product-display-content-first-box{
     position:relative;
     height:20%;
-    background-color: aqua;
 }
 
-.product-display-content-name{
-    position: absolute;
-    left:10%;
-    font-size:200%;
+.product-display-content-first-box p{
+    margin: 0;
 }
 
 .product-display-content-cost{
+    position: absolute;
+    left:4%;
+    top: 10%;
+    font-size: 140%;
+}
+
+.product-display-content-quantity{
     position:absolute;
     right:10%;
-}
-.product-display-content-quantity{
-    display: block;
-    background-color: bisque;
-    height:10%;
-}
+    top: 20%;
+} 
 
 .product-display-content-content{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .product-display-content-buy{
+    position: absolute;
+    width:inherit;
+    height:8%;
+    bottom: 20%;
     display: flex;
+    align-items: center;
     justify-content:space-around;
-    background-color: blueviolet;
-}
-
-.product-display-content-div-buy{
-    
 }
 
 .product-display-content-cart{
+    cursor: pointer;
+    padding:2%;
+    padding-left:10%;
+    padding-right:10%;
+    color: #000000;
+    font-size: 80%;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border-color: rgba(0, 0, 0, 0.9);
 
 }
+
+.product-display-content-div-buy{
+    cursor: pointer;
+    padding: 2%;
+    padding-left:10%;
+    padding-right:10%;
+    color: #fff;
+    font-size: 80%;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    border: none;
+}
+
 
 @media(max-width:740px){
     .product-display{

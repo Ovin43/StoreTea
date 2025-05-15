@@ -9,13 +9,13 @@ import { useProductStore } from "../store/useProductStore";
 // import "swiper/css/scrollbar";
 
 const ProdSlie=()=>{
-    const[name,setName]=useState("Green Tea");
+    const[name,setName]=useState("Black Tea");
 
     const slRef = useRef(null);
     
-    const {productDetails} = useProductStore();
+    const {productstore} = useProductStore();
     useEffect(()=>{
-            productDetails({prodName:name})
+            productstore({prodName:name})
         },[name])
     return(
         <>
