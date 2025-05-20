@@ -25,7 +25,7 @@ const Navbar= ()=>{
                                 <>
                                 <Link to={"/profile"}>
                                     <div className="navprofile"  >
-                                        <img className="navprofileimg" src="img/gojo.jpg"/>
+                                        <img className="navprofileimg" src={authUser.profilPic}/>
                                     </div>
                                 </Link>
                                 <Link to={"/cart"} className="navshopping" >

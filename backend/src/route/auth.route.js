@@ -10,7 +10,7 @@ router.post("/logout",logout);
 
 router.post("/login",login);
 
-router.post("/updatePro",updateProfile);
+router.put("/updatePro",updateProfile);
 
 router.get("/checkAuth",checkAuth);
 

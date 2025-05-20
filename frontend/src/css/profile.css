@@ -1,0 +1,178 @@
+.profile_page_main{
+    padding-top: 70px;
+    width:100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.profile_page{
+    position: relative;
+    height: 90%;
+    width: 50%;
+    border-radius:20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
+}
+
+
+
+.profile_page_photo_div{
+    position: absolute;
+    height:28%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile_page_photo-ring{
+    position: absolute;
+    width: 25%;
+    height: 80%;
+    border-radius:50%;
+    border-bottom-right-radius:10%;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.profile_page_photo{
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    border-radius:50%;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+
+.profile_page_photo img{
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    border-radius:50%;
+}
+
+.profile_page_photo_button{
+    position: absolute;
+    bottom:0;
+    right: 0;
+    cursor: pointer;
+}
+
+
+
+.profile_page_content{
+    position: absolute;
+    top:28%;
+    height: 5%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+
+
+.profile_page_name{
+    position: absolute;
+    top: 33%;
+    height: 18%;
+    width: 100%;
+}
+
+.profile_page_name_box_head{
+    position: absolute;
+    left:9%;
+    top: 20%;
+    width: 100%;
+    display: flex;
+}
+
+.profile_page_name_box_head_name{
+    font-size: 140%;
+}
+
+.profile_page_name_box_output{
+    position: absolute;
+    padding-left: 1%;
+    top: 45%;
+    left: 9%;
+    height:35px;
+    width:80%;
+    border: 2px solid black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(203, 212, 212);
+}
+
+
+.profile_page_email{
+    position: absolute;
+    top: 51%;
+    height: 18%;
+    width: 100%;
+}
+
+.profile_page_email_head{
+    position: absolute;
+    left:9%;
+    top: 20%;
+    width: 100%;
+    display: flex;
+}
+
+.profile_page_email_head_name{
+     font-size: 140%;
+}
+
+.profile_page_email_output{
+    position: absolute;
+    padding-left:1%;
+    top: 45%;
+    left: 9%;
+    height:35px;
+    width:80%;
+    border: 2px solid black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(203, 212, 212);
+}
+
+
+.profile_page_button{
+    position: absolute;
+    top: 69%;
+    height:31%;
+    width: 100%;
+}
+
+.profile_page_setting{
+    padding:5%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile_page_setting button{
+    padding-left: 43%;
+    padding-right: 43%;
+    border-radius: 8px;
+}
+
+.profile_page_logout{
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile_page_logout button{
+    border-radius: 8px;
+    padding-left: 43%;
+    padding-right: 43%;
+}
