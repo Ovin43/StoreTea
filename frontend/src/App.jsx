@@ -16,6 +16,7 @@ import"./css/style.css"
 import"./css/loginstyle.css"
 import"./css/product.css"
 import"./css/profile.css"
+import"./css/cart.css"
 
 import { useAuthStore } from "./store/useAuthStore"
 import { useProductStore } from "./store/useProductStore"
